@@ -20,10 +20,18 @@ Example 2 of the flashing pattern when Image 4 is selected: LED flashes four tim
 
 On the Apple II, a reboot should then be triggered via SmartPort (for ROM4: press Control-Reset-Closed Apple, release Control-Reset and hold Closed Apple) or by switching the Apple II off and on.
 
-## Error handling / programming:
+## Error handling:
 If the SD card is unreadable or an image could not be opened successfully, the microcontroller’s built-in LED flashes continuously in an endless loop without interruption.
 Detailed error messages can be viewed via a connected serial terminal (speed is 230400, via the microcontroller’s USB port). If the SPIISD adapter is connected to the Apple II, it is important that the (+5V line) of the USB cable used (USB Power Cut Cable) is cut. Otherwise, this may cause damage to the Apple II!!
 
-For programming, the microcontroller is connected via USB, e.g. to a PC; an urclock bootloader is installed. 
+You can also use a SmartPhone with the "Serial USB Terminal App" a USB-OTG Adapter and a USB Power Cut Cable to view live log data of the adapter.
+
+Character - is written for every 512 byte block read from the image and transfered to the Apple. Character + for every 512 byte block written to the sd image.
+
+## Programming
+For programming, the microcontroller is connected via USB, e.g. to a PC with urclock bootloader on the Nano 
 On some Arduino Nanos, the microcontroller is a 328pb rather than a 328p. For programming, the correct ENV must be selected in the platformio.ini file. 
 upload_speed is either 57600 or 115200; some Nano boards have problems with one or the other setting. It is important to ensure that the Nano is not connected to the Apple II!!
+
+## In case the adapter won't work with an Apple II:
+Disconnect it from the Apple and connect it via USB-Cable to a PC. Open a terminal (230400 baud) to see if something is wrong with the SD-Card or the images during program start in the log. At least loading of images and the eject button should work properly without an Apple.
