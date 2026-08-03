@@ -1,0 +1,8 @@
+A2DeskTop15.hdv
+AppleIIDiag4.po
+#Apple Logo II.po
+#AppleTerm 1.0.po
+#AppleWorks 2.1.po
+#ProDOS_2_5_a8_143k.po
+TotalReplay260605.hdv
+Visicalc_Advanced.po
