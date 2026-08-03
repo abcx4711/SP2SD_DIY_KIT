@@ -15,6 +15,7 @@ The files must be readable and not empty; otherwise, they will not be used. They
 If the eject button is pressed several times within 2 seconds, the next image (1 – maximum 4) is selected for booting. At the end (after 2 seconds), the microcontroller restarts automatically. Shortly before the reboot, the microcontroller’s built-in LED triggers two flashing sequences.
 
 Example 1 of the flashing pattern when Image 2 is selected: LED flashes twice, pause for 600 ms, LED flashes twice
+
 Example 2 of the flashing pattern when Image 4 is selected: LED flashes four times, pause for 600 ms, LED flashes four times
 
 On the Apple II, a reboot should then be triggered via SmartPort (for ROM4: press Control-Reset-Closed Apple, release Control-Reset and hold Closed Apple) or by switching the Apple II off and on.
