@@ -1,4 +1,4 @@
-# SmartportSD version 1.17c
+# SmartportSD version 1.17c for PlatformIO
 When switched on (when the adapter receives power from the Apple II) or after pressing the reset button on the microcontroller, the software loads up to 4 ProDOS images from the SD card and makes them available to an Apple II as drives via the SmartPort.
 An active image can be used to boot the Apple II; the Eject button is used to change the boot image whilst the system is running.
 
