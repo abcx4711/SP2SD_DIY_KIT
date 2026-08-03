@@ -61,11 +61,18 @@
         -> only the first 4 valid partitions without # will be activated (A2DeskTop15.hdv, AppleIIDiag4.po ,AppleWorks 2.1.po, TotalReplay260605.hdv)
         -> invalid (wrong filename, wrong format) partitions are skipped
     - fixed some bugs, code/definitions never used removed
-    - error handling when sd card could not be read or no valid partitions found (defined in config.txt or PART1.po/PART2.po/PART3.po/PART4.po) - led will blink forever in endless loop
+    - error handling when sd card could not be read or no valid images found (defined in config.txt or PART1.po/PART2.po/PART3.po/PART4.po) - led will blink forever in endless loop
     - error in check for .2mg filename / check .2mg for ProDOS sector order
     - improved debug messages, for example : display name, size of image in 512byte blocks and result of opening images (example Open 00playable.2mg-65535-.2mg no ProDOS order)
-    - after pressing eject, internal led will flash according to image selected, example : Image 2 selected : Led flashes 2 times (600ms delay) Led flashes 2 times
+    - rotate_boot modified, pressing eject multiple times switch  button
+    - after rotate_boot has finished, internal led will flash according to image selected, example : Image 2 selected : Led flashes 2 times (600ms delay) Led flashes 2 times
     - additional timeout handler in ReceivePacket()
+
+    Functionality:
+    Up to 4 images
+    If the eject button is pressed multiple times within two seconds,
+    the next image is selected each time. At the end (after two seconds),
+    the microcontroller automatically restarts.
     */
 
 // Apple disk interface is connected as follows:
